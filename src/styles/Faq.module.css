@@ -1,0 +1,60 @@
+@import "variables.css";
+
+.FaqContainer {
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.FaqContainer > h2 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 2.5em;
+}
+
+#accordion {
+  margin: 100px auto;
+  width: 800px;
+}
+
+#accordion li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: whitesmoke;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #c20000;
+}
+
+#accordion li label span {
+  transform: rotate(90deg);
+  font-size: 22px;
+  color: #333;
+}
+
+#accordion label + input[type="radio"] {
+  display: none;
+}
+
+#accordion div {
+  padding: 0 10px;
+  line-height: 26px;
+  display: none;
+  max-height: 400px;
+  overflow: hidden;
+  transition: display 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + div {
+  display: block;
+}
